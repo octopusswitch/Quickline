@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Get £100 when you join Quickline</title>
+  <meta name="description" content="Join Quickline using my referral link. If eligible, you get a £100 reward after the service goes live, under the current terms." />
+
+  <!-- Font (close match). If you have Quickline’s official webfont files, swap Inter below via @font-face. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Brand vibe */
+      --purple:#2D0845;
+      --green:#57B4AF; /* replaced all green with this */
+
+      /* Inverted UI (lighter background, darker text) */
+      --bg:#f7f4ff;
+      --panel: rgba(45,8,69,.06);
+      --panel2: rgba(45,8,69,.04);
+      --text:#1b0a2a;
+      --muted: rgba(27,10,42,.72);
+      --line: rgba(27,10,42,.12);
+      --shadow: 0 18px 46px rgba(0,0,0,.12);
+
+      --radius:18px;
+      --max: 980px;
+
+      --font: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+
+    body{
+      margin:0;
+      font-family: var(--font);
+      background:
+        radial-gradient(1100px 700px at 15% 10%, rgba(87,180,175,.18), transparent 55%),
+        radial-gradient(900px 600px at 85% 20%, rgba(45,8,69,.18), transparent 55%),
+        radial-gradient(800px 500px at 60% 90%, rgba(87,180,175,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg), #ffffff 65%);
+      color:var(--text);
+      line-height:1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: geometricPrecision;
+    }
+
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:34px 18px 130px}
+
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      padding:12px 0 22px;
+      flex-wrap:wrap;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:900;
+      letter-spacing:.2px;
+    }
+    .brand-mark{
+      width:12px; height:12px;
+      border-radius:4px;
+      background: var(--green);
+      box-shadow: 0 0 0 4px rgba(87,180,175,.18);
+    }
+
+    .badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--muted);
+      background: rgba(255,255,255,.65);
+      font-size:13px;
+      font-weight:800;
+    }
+    .badge .dot{
+      width:8px; height:8px;
+      border-radius:99px;
+      background: var(--green);
+      box-shadow: 0 0 0 4px rgba(87,180,175,.18);
+    }
+
+    .stack{display:flex; flex-direction:column; gap:18px}
+
+    .hero{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.90), rgba(255,255,255,.70));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero-inner{padding:34px}
+    @media (max-width: 520px){
+      .hero-inner{padding:26px}
+    }
+
+    h1{
+      margin:0 0 14px;
+      font-size:52px;
+      line-height:1.08;
+      letter-spacing:-.8px;
+      font-weight:900;
+      text-align:center;
+    }
+    @media (max-width: 520px){
+      h1{font-size:40px}
+    }
+
+    .sub{
+      margin:0 auto 16px;
+      color:var(--muted);
+      font-size:20.8px;
+      max-width: 68ch;
+      font-weight:700;
+      text-align:center;
+    }
+
+    .proof-row{
+      margin-top:18px;
+      display:flex; flex-wrap:wrap; gap:12px;
+      justify-content:center;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      background: rgba(255,255,255,.70);
+      border:1px solid var(--line);
+      color:var(--muted);
+      font-size:14px;
+      font-weight:800;
+    }
+    .pill strong{color:var(--text)}
+    .spark{color:var(--green)}
+
+    .cta{
+      margin-top:22px;
+      border:1px solid rgba(87,180,175,.35);
+      background: rgba(87,180,175,.10);
+      border-radius: 18px;
+      padding:22px;
+    }
+    .cta-inner{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      gap:14px;
+    }
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:16px 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(0,0,0,.10);
+      text-decoration:none;
+      font-weight:900;
+      letter-spacing:.2px;
+      transition: transform .06s ease, filter .2s ease;
+      user-select:none;
+      white-space:normal;
+      text-align:center;
+      line-height:1.15;
+    }
+    .btn:active{transform: translateY(1px)}
+
+    .btn-primary{
+      width:min(640px, 100%);
+      background: linear-gradient(90deg, var(--green), #3aa7a1);
+      color:#06211f;
+      border-color: rgba(87,180,175,.55);
+      box-shadow: 0 12px 34px rgba(87,180,175,.20);
+      padding:20px 22px;
+      font-size:20.8px;
+    }
+    @media (max-width: 520px){
+      .btn-primary{
+        font-size:18px;
+        padding:18px 18px;
+      }
+    }
+
+    .micro{
+      color:var(--muted);
+      font-size:14px;
+      font-weight:700;
+      max-width: 78ch;
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .card{
+      border:1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255,255,255,.72);
+      padding:22px;
+      box-shadow: var(--shadow);
+    }
+    .card h2{
+      margin:0 0 12px;
+      font-size:18px;
+      letter-spacing:-.2px;
+      font-weight:900;
+    }
+    .list{
+      margin:0;
+      padding-left:20px;
+      color:var(--muted);
+      font-weight:700;
+    }
+    .list li{margin:10px 0}
+    .list strong{color:var(--text)}
+
+    .section{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.72);
+      padding:22px;
+      box-shadow: var(--shadow);
+    }
+    .section h2{
+      margin:0 0 14px;
+      font-size:22px;
+      letter-spacing:-.3px;
+      font-weight:900;
+    }
+
+    .cols{
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width: 920px){
+      .cols{grid-template-columns:1fr}
+    }
+
+    .step{
+      border:1px solid var(--line);
+      border-radius: 16px;
+      padding:18px;
+      background: rgba(45,8,69,.04);
+    }
+    .step .num{
+      width:36px; height:36px;
+      display:inline-flex; align-items:center; justify-content:center;
+      border-radius: 12px;
+      background: rgba(87,180,175,.16);
+      border:1px solid rgba(87,180,175,.40);
+      color:#0b3a37;
+      font-weight:900;
+      margin-bottom:10px;
+    }
+    .step h3{margin:0 0 8px; font-size:17px; font-weight:900}
+    .step p{margin:0; color:var(--muted); font-size:15px; font-weight:700}
+
+    details{
+      border:1px solid var(--line);
+      border-radius: 16px;
+      padding:14px 16px;
+      background: rgba(255,255,255,.72);
+      margin:12px 0;
+    }
+    summary{cursor:pointer; font-weight:900; outline:none}
+    details p{margin:12px 0 0; color:var(--muted); font-weight:700}
+
+    .footer{
+      margin-top:8px;
+      color:var(--muted);
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .sticky{
+      position:fixed;
+      left:0; right:0; bottom:0;
+      padding:12px 14px;
+      background: rgba(247,244,255,.92);
+      backdrop-filter: blur(10px);
+      border-top:1px solid var(--line);
+      z-index:20;
+    }
+    .sticky .sticky-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .sticky .txt{color:var(--muted); font-size:13px; font-weight:900}
+    @media (max-width: 520px){
+      .sticky .sticky-inner{flex-direction:column; align-items:stretch}
+      .sticky .txt{text-align:center}
+      .sticky a{width:100%}
+    }
+
+    @media (max-width: 360px){
+      .btn-primary{font-size:16px}
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17932665758"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17932665758');
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Switch to Quickline</span>
+      </div>
+
+      <div class="badge">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Superfast Internet Across The UK.</span>
+      </div>
+    </div>
+
+    <div class="stack">
+      <section class="hero">
+        <div class="hero-inner">
+          <h1>Get £100 when you join Quickline</h1>
+
+          <p class="sub">Faster broadband for rural communities, with a reward when you sign up via my link.</p>
+
+          <div class="proof-row">
+            <div class="pill"><span class="spark" aria-hidden="true">✦</span><strong>£100 reward for you</strong></div>
+            <div class="pill"><strong>Award-winning rural broadband</strong></div>
+            <div class="pill"><strong>No mid-contract price rises</strong></div>
+          </div>
+
+          <div class="cta">
+            <div class="cta-inner">
+              <a class="btn btn-primary"
+                 href="https://referrals.quickline.co.uk/uECHSgGC"
+                 target="_blank"
+                 rel="noopener"
+                 onclick="gtag('event','cta_click_top',{event_category:'engagement',event_label:'quickline_referral'});">
+                Check availability and claim £100 <span aria-hidden="true">→</span>
+              </a>
+
+              <div class="micro">
+                Tip: start from the link and finish in one go so the referral tracks properly.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card" style="box-shadow:none; padding:0; border:none; background:transparent;">
+          <h2>What you get</h2>
+          <ul class="list">
+            <li><strong>£100 referral reward</strong> for you (if eligible, after the service goes live)</li>
+            <li><strong>Local-focused broadband</strong> built for rural areas</li>
+            <li><strong>Clear pricing</strong>, no mid-contract price increases</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>How it works</h2>
+        <div class="cols">
+          <div class="step">
+            <div class="num">1</div>
+            <h3>Tap the referral link</h3>
+            <p>Start from the referral link so the reward can be tracked.</p>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <h3>Check availability</h3>
+            <p>Enter your postcode and pick the package that fits your home.</p>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <h3>Complete sign-up</h3>
+            <p>Once your service goes live, the £100 reward follows the scheme terms.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <h2>FAQs</h2>
+
+        <details>
+          <summary>Will I definitely get the £100?</summary>
+          <p>
+            Only if the referral offer is active, you are eligible, and your service goes live under the current terms.
+            You should see the referral details during sign-up.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can I use a comparison site and still get the referral?</summary>
+          <p>
+            Usually not. If you want the referral reward, start from the referral link and complete the journey from there.
+          </p>
+        </details>
+
+        <details>
+          <summary>What if I forget to use the link?</summary>
+          <p>
+            Some providers can add it after, some cannot. If you forget, contact Quickline support as soon as possible and ask.
+          </p>
+        </details>
+
+        <div class="cta" style="margin-top:18px">
+          <div class="cta-inner">
+            <a class="btn btn-primary"
+               href="https://referrals.quickline.co.uk/uECHSgGC"
+               target="_blank"
+               rel="noopener"
+               onclick="gtag('event','cta_click_faq',{event_category:'engagement',event_label:'quickline_referral'});">
+              Check availability and claim £100 <span aria-hidden="true">→</span>
+            </a>
+            <div class="micro">Opens in a new tab.</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer">
+        <p>
+          Disclaimer: This page is not affiliated with Quickline. Offers and terms can change, always verify on the official site before signing up.
+          I may receive a referral reward if you join using my link.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sticky" role="region" aria-label="Quick action">
+    <div class="sticky-inner">
+      <div class="txt">Ready to check availability and claim £100?</div>
+      <a class="btn btn-primary"
+         style="padding:14px 16px; font-size:16px; width:auto"
+         href="https://referrals.quickline.co.uk/uECHSgGC"
+         target="_blank"
+         rel="noopener"
+         onclick="gtag('event','cta_click_sticky',{event_category:'engagement',event_label:'quickline_referral'});">
+        Start now →
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('details').forEach((d) => {
+      d.addEventListener('toggle', () => {
+        if (d.open) gtag('event','faq_open',{
+          event_category:'engagement',
+          event_label: d.querySelector('summary')?.innerText || ''
+        });
+      });
+    });
+  </script>
+</body>
+</html>
